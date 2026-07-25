@@ -2,618 +2,1223 @@
 <html lang="en">
 
 <head>
-
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>Career Connect | Global Remote Careers</title>
-
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-
-<style>
-
-*{
-margin:0;
-padding:0;
-box-sizing:border-box;
-font-family:'Poppins',sans-serif;
-}
-
-html{
-scroll-behavior:smooth;
-}
-
-body{
-background:#f5f8fc;
-color:#222;
-}
-
-header{
-
-position:fixed;
-top:0;
-left:0;
-width:100%;
-padding:20px 8%;
-display:flex;
-justify-content:space-between;
-align-items:center;
-background:rgba(8,20,40,.95);
-backdrop-filter:blur(12px);
-z-index:999;
-
-}
-
-.logo{
-
-font-size:30px;
-font-weight:700;
-color:#fff;
-
-}
-
-.logo span{
-
-color:#3da5ff;
-
-}
-
-nav a{
-
-color:white;
-text-decoration:none;
-margin-left:35px;
-font-weight:500;
-transition:.3s;
-
-}
-
-nav a:hover{
-
-color:#3da5ff;
-
-}
-
-.hero{
-
-height:100vh;
-display:flex;
-align-items:center;
-justify-content:center;
-text-align:center;
-background:
-
-linear-gradient(rgba(5,18,40,.75),
-rgba(5,18,40,.75)),
-
-url('https://images.unsplash.com/photo-1521791136064-7986c2920216?auto=format&fit=crop&w=1800&q=80');
-
-background-size:cover;
-background-position:center;
-
-color:white;
-
-padding:0 20px;
-
-}
-
-.hero-content{
-
-max-width:900px;
-
-}
-
-.hero h1{
-
-font-size:65px;
-margin-bottom:20px;
-line-height:1.2;
-
-}
-
-.hero p{
-
-font-size:22px;
-opacity:.9;
-margin-bottom:45px;
-
-}
-
-.btn{
-
-display:inline-block;
-padding:18px 45px;
-background:#3da5ff;
-color:white;
-text-decoration:none;
-border-radius:50px;
-font-size:18px;
-font-weight:600;
-transition:.3s;
-
-}
-
-.btn:hover{
-
-background:#1976d2;
-transform:translateY(-4px);
-
-}
-
-.stats{
-
-display:grid;
-grid-template-columns:repeat(4,1fr);
-gap:30px;
-margin-top:70px;
-
-}
-
-.stat{
-
-background:rgba(255,255,255,.12);
-padding:25px;
-border-radius:18px;
-backdrop-filter:blur(10px);
-
-}
-
-.stat h2{
-
-font-size:42px;
-
-}
-
-.stat p{
-
-margin-top:8px;
-font-size:15px;
-
-}
-
-section{
-
-padding:100px 8%;
-
-}
-
-.title{
-
-text-align:center;
-margin-bottom:60px;
-
-}
-
-.title h2{
-
-font-size:42px;
-color:#0d47a1;
-
-}
-
-.title p{
-
-margin-top:10px;
-color:#777;
-
-}
-
-.cards{
-
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
-gap:30px;
-
-}
-
-.card{
-
-background:white;
-padding:35px;
-border-radius:18px;
-box-shadow:0 15px 40px rgba(0,0,0,.08);
-transition:.3s;
-
-}
-
-.card:hover{
-
-transform:translateY(-10px);
-
-}
-
-.card h3{
-
-margin-bottom:15px;
-color:#0d47a1;
-
-}
-
-.card p{
-
-line-height:1.7;
-color:#666;
-
-}
-
-@media(max-width:900px){
-
-.hero h1{
-
-font-size:42px;
-
-}
-
-.hero p{
-
-font-size:18px;
-
-}
-
-.stats{
-
-grid-template-columns:repeat(2,1fr);
-
-}
-
-nav{
-
-display:none;
-
-}
-
-}
-
-</style>
-
+  <meta charset="UTF-8">
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  >
+
+  <meta
+    name="description"
+    content="Career Connect provides information about remote career opportunities and a transparent application process."
+  >
+
+  <title>Career Connect | Remote Career Opportunities</title>
+
+  <link
+    rel="preconnect"
+    href="https://fonts.googleapis.com"
+  >
+
+  <link
+    rel="preconnect"
+    href="https://fonts.gstatic.com"
+    crossorigin
+  >
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+    rel="stylesheet"
+  >
+
+  <style>
+    :root {
+      --primary: #1769e0;
+      --primary-dark: #0b3d91;
+      --navy: #071a33;
+      --text: #172033;
+      --muted: #64748b;
+      --background: #f5f8fc;
+      --white: #ffffff;
+      --border: #dfe7f1;
+      --success: #147d50;
+      --warning-background: #fff8e8;
+      --warning-border: #f2ce78;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: "Poppins", sans-serif;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      scroll-padding-top: 90px;
+    }
+
+    body {
+      background: var(--background);
+      color: var(--text);
+      line-height: 1.6;
+    }
+
+    a {
+      color: inherit;
+    }
+
+    header {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      min-height: 74px;
+      padding: 14px 7%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background: rgba(7, 26, 51, 0.97);
+      backdrop-filter: blur(12px);
+      z-index: 999;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.12);
+    }
+
+    .logo {
+      color: var(--white);
+      text-decoration: none;
+      font-size: 27px;
+      font-weight: 700;
+      letter-spacing: -1px;
+    }
+
+    .logo span {
+      color: #52adff;
+    }
+
+    nav {
+      display: flex;
+      align-items: center;
+      gap: 28px;
+    }
+
+    nav a {
+      color: var(--white);
+      text-decoration: none;
+      font-size: 14px;
+      font-weight: 500;
+      transition: 0.25s;
+    }
+
+    nav a:hover {
+      color: #52adff;
+    }
+
+    .nav-apply {
+      padding: 10px 20px;
+      border: 1px solid #52adff;
+      border-radius: 30px;
+    }
+
+    .menu-button {
+      display: none;
+      border: 0;
+      background: transparent;
+      color: var(--white);
+      font-size: 28px;
+      cursor: pointer;
+    }
+
+    .hero {
+      min-height: 100vh;
+      padding: 145px 7% 90px;
+      display: flex;
+      align-items: center;
+      background:
+        linear-gradient(
+          90deg,
+          rgba(5, 20, 43, 0.96) 0%,
+          rgba(5, 20, 43, 0.84) 55%,
+          rgba(5, 20, 43, 0.64) 100%
+        ),
+        url("https://images.unsplash.com/photo-1521737711867-e3b97375f902?auto=format&fit=crop&w=1800&q=85");
+
+      background-position: center;
+      background-size: cover;
+      color: var(--white);
+    }
+
+    .hero-content {
+      width: 100%;
+      max-width: 800px;
+    }
+
+    .eyebrow {
+      display: inline-block;
+      margin-bottom: 20px;
+      padding: 8px 14px;
+      border: 1px solid rgba(255, 255, 255, 0.28);
+      border-radius: 30px;
+      background: rgba(255, 255, 255, 0.09);
+      font-size: 13px;
+      font-weight: 600;
+      letter-spacing: 0.6px;
+      text-transform: uppercase;
+    }
+
+    .hero h1 {
+      margin-bottom: 22px;
+      font-size: clamp(42px, 6vw, 70px);
+      line-height: 1.1;
+      letter-spacing: -2px;
+    }
+
+    .hero-description {
+      max-width: 690px;
+      margin-bottom: 34px;
+      color: rgba(255, 255, 255, 0.87);
+      font-size: 19px;
+    }
+
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 14px;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 15px 27px;
+      border-radius: 8px;
+      text-decoration: none;
+      font-size: 15px;
+      font-weight: 600;
+      transition: 0.25s;
+    }
+
+    .btn-primary {
+      background: var(--primary);
+      color: var(--white);
+    }
+
+    .btn-primary:hover {
+      background: #0e55bf;
+      transform: translateY(-2px);
+    }
+
+    .btn-secondary {
+      border: 1px solid rgba(255, 255, 255, 0.5);
+      color: var(--white);
+      background: rgba(255, 255, 255, 0.07);
+    }
+
+    .btn-secondary:hover {
+      background: rgba(255, 255, 255, 0.14);
+    }
+
+    .trust-row {
+      margin-top: 46px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px 28px;
+      color: rgba(255, 255, 255, 0.84);
+      font-size: 14px;
+    }
+
+    .trust-item::before {
+      content: "✓";
+      margin-right: 8px;
+      color: #75e0aa;
+      font-weight: 700;
+    }
+
+    section {
+      padding: 95px 7%;
+    }
+
+    .section-white {
+      background: var(--white);
+    }
+
+    .section-dark {
+      background: var(--navy);
+      color: var(--white);
+    }
+
+    .section-heading {
+      max-width: 740px;
+      margin: 0 auto 54px;
+      text-align: center;
+    }
+
+    .section-heading.left {
+      margin-left: 0;
+      text-align: left;
+    }
+
+    .section-heading h2 {
+      margin-bottom: 14px;
+      color: var(--primary-dark);
+      font-size: clamp(32px, 4vw, 44px);
+      line-height: 1.2;
+      letter-spacing: -1px;
+    }
+
+    .section-dark .section-heading h2 {
+      color: var(--white);
+    }
+
+    .section-heading p {
+      color: var(--muted);
+      font-size: 16px;
+    }
+
+    .section-dark .section-heading p {
+      color: rgba(255, 255, 255, 0.72);
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+    }
+
+    .card {
+      padding: 30px;
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      background: var(--white);
+      box-shadow: 0 12px 35px rgba(25, 56, 95, 0.07);
+    }
+
+    .card-number {
+      width: 44px;
+      height: 44px;
+      margin-bottom: 20px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 11px;
+      background: #eaf3ff;
+      color: var(--primary);
+      font-weight: 700;
+    }
+
+    .card h3 {
+      margin-bottom: 12px;
+      color: var(--primary-dark);
+      font-size: 19px;
+    }
+
+    .card p {
+      color: var(--muted);
+      font-size: 15px;
+    }
+
+    .job-layout {
+      display: grid;
+      grid-template-columns: 1.5fr 0.8fr;
+      gap: 28px;
+      align-items: start;
+    }
+
+    .job-panel {
+      padding: 36px;
+      border-radius: 18px;
+      background: var(--white);
+      border: 1px solid var(--border);
+      box-shadow: 0 15px 40px rgba(25, 56, 95, 0.07);
+    }
+
+    .job-panel h3 {
+      margin-bottom: 10px;
+      color: var(--primary-dark);
+      font-size: 27px;
+    }
+
+    .job-subtitle {
+      margin-bottom: 28px;
+      color: var(--muted);
+    }
+
+    .job-panel h4 {
+      margin: 27px 0 12px;
+      color: var(--text);
+      font-size: 17px;
+    }
+
+    .check-list {
+      list-style: none;
+    }
+
+    .check-list li {
+      position: relative;
+      margin-bottom: 12px;
+      padding-left: 28px;
+      color: #45536a;
+      font-size: 15px;
+    }
+
+    .check-list li::before {
+      content: "✓";
+      position: absolute;
+      left: 0;
+      color: var(--success);
+      font-weight: 700;
+    }
+
+    .job-summary {
+      padding: 30px;
+      border-radius: 18px;
+      background: var(--navy);
+      color: var(--white);
+      position: sticky;
+      top: 100px;
+    }
+
+    .job-summary h3 {
+      margin-bottom: 22px;
+      font-size: 23px;
+    }
+
+    .summary-row {
+      padding: 17px 0;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.14);
+    }
+
+    .summary-row:last-of-type {
+      border-bottom: 0;
+    }
+
+    .summary-label {
+      display: block;
+      margin-bottom: 5px;
+      color: rgba(255, 255, 255, 0.62);
+      font-size: 12px;
+      text-transform: uppercase;
+      letter-spacing: 0.7px;
+    }
+
+    .summary-value {
+      font-size: 15px;
+      font-weight: 600;
+    }
+
+    .summary-note {
+      margin: 20px 0;
+      color: rgba(255, 255, 255, 0.69);
+      font-size: 12px;
+      line-height: 1.7;
+    }
+
+    .job-summary .btn {
+      width: 100%;
+      text-align: center;
+    }
+
+    .process-grid {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      gap: 18px;
+    }
+
+    .process-card {
+      padding: 25px 20px;
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      background: var(--white);
+    }
+
+    .process-number {
+      margin-bottom: 17px;
+      color: var(--primary);
+      font-size: 28px;
+      font-weight: 700;
+    }
+
+    .process-card h3 {
+      margin-bottom: 9px;
+      font-size: 17px;
+      color: var(--primary-dark);
+    }
+
+    .process-card p {
+      color: var(--muted);
+      font-size: 13px;
+    }
+
+    .notice {
+      max-width: 1000px;
+      margin: 0 auto;
+      padding: 33px;
+      border: 1px solid var(--warning-border);
+      border-radius: 16px;
+      background: var(--warning-background);
+    }
+
+    .notice h2 {
+      margin-bottom: 13px;
+      color: #7a5100;
+      font-size: 25px;
+    }
+
+    .notice p {
+      color: #725d31;
+      font-size: 15px;
+    }
+
+    .notice strong {
+      color: #563a00;
+    }
+
+    .faq-container {
+      max-width: 900px;
+      margin: 0 auto;
+    }
+
+    details {
+      margin-bottom: 14px;
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      background: var(--white);
+      overflow: hidden;
+    }
+
+    summary {
+      padding: 21px 24px;
+      cursor: pointer;
+      color: var(--primary-dark);
+      font-weight: 600;
+      list-style: none;
+    }
+
+    summary::-webkit-details-marker {
+      display: none;
+    }
+
+    details p {
+      padding: 0 24px 22px;
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    .contact-box {
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 52px;
+      border-radius: 20px;
+      background:
+        linear-gradient(135deg, #0a3e8c, #1769e0);
+      color: var(--white);
+      text-align: center;
+      box-shadow: 0 18px 50px rgba(23, 105, 224, 0.25);
+    }
+
+    .contact-box h2 {
+      margin-bottom: 12px;
+      font-size: 36px;
+    }
+
+    .contact-box p {
+      max-width: 650px;
+      margin: 0 auto 25px;
+      color: rgba(255, 255, 255, 0.82);
+    }
+
+    .legal-section {
+      max-width: 950px;
+      margin: 0 auto;
+    }
+
+    .legal-section h3 {
+      margin: 27px 0 10px;
+      color: var(--primary-dark);
+    }
+
+    .legal-section p {
+      margin-bottom: 14px;
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    footer {
+      padding: 55px 7% 28px;
+      background: #051326;
+      color: var(--white);
+    }
+
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 1.4fr 1fr 1fr;
+      gap: 40px;
+      padding-bottom: 35px;
+    }
+
+    .footer-brand h2 {
+      margin-bottom: 10px;
+    }
+
+    .footer-brand p,
+    .footer-column p,
+    .footer-column a {
+      color: rgba(255, 255, 255, 0.65);
+      font-size: 13px;
+    }
+
+    .footer-column h3 {
+      margin-bottom: 15px;
+      font-size: 15px;
+    }
+
+    .footer-column a {
+      display: block;
+      margin-bottom: 9px;
+      text-decoration: none;
+    }
+
+    .footer-column a:hover {
+      color: var(--white);
+    }
+
+    .footer-bottom {
+      padding-top: 24px;
+      border-top: 1px solid rgba(255, 255, 255, 0.12);
+      color: rgba(255, 255, 255, 0.52);
+      font-size: 12px;
+      text-align: center;
+    }
+
+    @media (max-width: 1000px) {
+      .grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .process-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .job-layout {
+        grid-template-columns: 1fr;
+      }
+
+      .job-summary {
+        position: static;
+      }
+    }
+
+    @media (max-width: 780px) {
+      header {
+        padding: 13px 5%;
+      }
+
+      .menu-button {
+        display: block;
+      }
+
+      nav {
+        display: none;
+        position: absolute;
+        top: 73px;
+        left: 0;
+        width: 100%;
+        padding: 20px 5%;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 18px;
+        background: var(--navy);
+      }
+
+      nav.open {
+        display: flex;
+      }
+
+      .hero {
+        min-height: auto;
+        padding: 135px 6% 85px;
+        background-position: 62% center;
+      }
+
+      .hero h1 {
+        letter-spacing: -1px;
+      }
+
+      .hero-description {
+        font-size: 17px;
+      }
+
+      section {
+        padding: 75px 6%;
+      }
+
+      .grid,
+      .process-grid,
+      .footer-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .job-panel,
+      .job-summary,
+      .contact-box {
+        padding: 27px 23px;
+      }
+
+      .footer-grid {
+        gap: 27px;
+      }
+    }
+  </style>
 </head>
 
 <body>
 
-<header>
+  <header>
+    <a class="logo" href="#home">
+      Career<span>Connect</span>
+    </a>
+
+    <button
+      class="menu-button"
+      id="menuButton"
+      aria-label="Open navigation menu"
+      aria-expanded="false"
+    >
+      ☰
+    </button>
+
+    <nav id="navigation">
+      <a href="#home">Home</a>
+      <a href="#about">About</a>
+      <a href="#jobs">Jobs</a>
+      <a href="#process">Process</a>
+      <a href="#faq">FAQ</a>
+      <a href="#contact">Contact</a>
+
+      <a
+        class="nav-apply"
+        href="#jobs"
+      >
+        View Position
+      </a>
+    </nav>
+  </header>
+
+  <main>
+
+    <section class="hero" id="home">
+      <div class="hero-content">
+
+        <span class="eyebrow">
+          Remote Career Opportunity
+        </span>
+
+        <h1>
+          Build Your Career Without Borders
+        </h1>
+
+        <p class="hero-description">
+          Explore a remote customer support opportunity with a clear
+          recruitment process, defined responsibilities and candidate
+          support throughout every stage.
+        </p>
+
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="#jobs">
+            View Job Details
+          </a>
+
+          <a class="btn btn-secondary" href="#process">
+            How Recruitment Works
+          </a>
+        </div>
+
+        <div class="trust-row">
+          <span class="trust-item">No application fee</span>
+          <span class="trust-item">Application review required</span>
+          <span class="trust-item">Written role details</span>
+        </div>
+
+      </div>
+    </section>
+
+    <section class="section-white" id="about">
+
+      <div class="section-heading">
+        <h2>About Career Connect</h2>
+
+        <p>
+          Career Connect publishes remote career opportunities and helps
+          candidates understand the role, requirements and application
+          process before proceeding.
+        </p>
+      </div>
+
+      <div class="grid">
+
+        <article class="card">
+          <div class="card-number">01</div>
+
+          <h3>Clear Job Information</h3>
+
+          <p>
+            Candidates receive information about responsibilities,
+            requirements, compensation and the recruitment process before
+            accepting a position.
+          </p>
+        </article>
+
+        <article class="card">
+          <div class="card-number">02</div>
+
+          <h3>Candidate Support</h3>
+
+          <p>
+            Shortlisted applicants receive instructions and communication
+            from the recruitment team throughout the screening process.
+          </p>
+        </article>
+
+        <article class="card">
+          <div class="card-number">03</div>
 
-<div class="logo">
+          <h3>Remote Opportunities</h3>
 
-Career<span>Connect</span>
+          <p>
+            Role availability may depend on the applicant’s location,
+            language ability, working hours and operational requirements.
+          </p>
+        </article>
 
-</div>
+      </div>
+    </section>
 
-<nav>
+    <section id="jobs">
 
-<a href="#">Home</a>
-<a href="#">About</a>
-<a href="#">Jobs</a>
-<a href="#">Benefits</a>
-<a href="#">Contact</a>
+      <div class="section-heading">
+        <h2>Current Opportunity</h2>
 
-</nav>
+        <p>
+          Please review the complete position information before contacting
+          the recruitment team.
+        </p>
+      </div>
 
-</header>
+      <div class="job-layout">
 
-<section class="hero">
+        <article class="job-panel">
 
-<div class="hero-content">
+          <h3>P2P Customer Support Specialist</h3>
 
-<h1>Build Your Career Without Borders</h1>
+          <p class="job-subtitle">
+            Full-time remote customer communication and support position.
+          </p>
 
-<p>
+          <h4>Role Responsibilities</h4>
 
-Join our international remote team and earn
+          <ul class="check-list">
+            <li>
+              Communicate with customers professionally through approved
+              online communication channels.
+            </li>
 
-<strong>3,000 USDT / Month + Commission</strong>
+            <li>
+              Respond to customer enquiries and provide clear information
+              based on company procedures.
+            </li>
 
-working from anywhere in the world.
+            <li>
+              Maintain accurate communication records where required.
+            </li>
+
+            <li>
+              Escalate unresolved or sensitive cases to the appropriate
+              supervisor.
+            </li>
 
-</p>
+            <li>
+              Follow privacy, security and customer service guidelines.
+            </li>
+          </ul>
 
-<a class="btn" href="https://t.me/CareerConnect88" target="_blank">
-  Apply Now
-</a>
+          <h4>Candidate Requirements</h4>
 
-<div class="stats">
+          <ul class="check-list">
+            <li>
+              Reliable computer or laptop and a stable internet connection.
+            </li>
 
-<div class="stat">
+            <li>
+              Ability to communicate clearly in English.
+            </li>
 
-<h2>80+</h2>
+            <li>
+              Responsible, patient and comfortable assisting customers
+              online.
+            </li>
 
-<p>Countries</p>
+            <li>
+              Availability for the working schedule confirmed during
+              screening.
+            </li>
 
-</div>
+            <li>
+              Customer support experience is helpful but not automatically
+              required.
+            </li>
+          </ul>
+
+          <h4>Compensation Information</h4>
 
-<div class="stat">
+          <p class="job-subtitle">
+            The advertised compensation is 3,000 USDT per month plus
+            commission, subject to successful screening, written employment
+            terms, performance requirements and the applicable payment
+            schedule.
+
+            Applicants should review and understand all written terms before
+            accepting an offer.
+          </p>
+
+        </article>
+
+        <aside class="job-summary">
+
+          <h3>Position Summary</h3>
 
-<h2>500+</h2>
+          <div class="summary-row">
+            <span class="summary-label">Position</span>
 
-<p>Team Members</p>
+            <span class="summary-value">
+              P2P Customer Support Specialist
+            </span>
+          </div>
 
-</div>
+          <div class="summary-row">
+            <span class="summary-label">Work Arrangement</span>
 
-<div class="stat">
+            <span class="summary-value">
+              Remote
+            </span>
+          </div>
 
-<h2>24/7</h2>
+          <div class="summary-row">
+            <span class="summary-label">Employment Type</span>
 
-<p>Customer Support</p>
+            <span class="summary-value">
+              Full-Time
+            </span>
+          </div>
 
-</div>
+          <div class="summary-row">
+            <span class="summary-label">Advertised Compensation</span>
 
-<div class="stat">
+            <span class="summary-value">
+              3,000 USDT / Month + Commission
+            </span>
+          </div>
 
-<h2>100%</h2>
+          <p class="summary-note">
+            Compensation, eligibility, working hours and payment terms must
+            be confirmed in writing before employment begins. Submission of
+            an application does not guarantee employment.
+          </p>
 
-<p>Remote</p>
+          <a
+            class="btn btn-primary"
+            href="https://t.me/CareerConnectHRbot?start=apply"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Start Application
+          </a>
 
-</div>
+        </aside>
 
-</div>
+      </div>
+    </section>
 
-</div>
+    <section class="section-white" id="process">
 
-</section>
-<section id="about">
+      <div class="section-heading">
+        <h2>Recruitment Process</h2>
 
-<div class="title">
-<h2>About Career Connect</h2>
-<p>Connecting talented people with global remote opportunities.</p>
-</div>
+        <p>
+          Every applicant should know what happens before accepting a role.
+        </p>
+      </div>
 
-<div class="cards">
+      <div class="process-grid">
 
-<div class="card">
-<h3>🌍 Global Company</h3>
-<p>
-Career Connect helps professionals work remotely with international teams.
-Our mission is to create flexible careers with competitive salaries and long-term growth.
-</p>
-</div>
+        <article class="process-card">
+          <div class="process-number">01</div>
+          <h3>Review the Role</h3>
+          <p>Read the responsibilities, requirements and compensation information.</p>
+        </article>
 
-<div class="card">
-<h3>💼 Professional Environment</h3>
-<p>
-We value communication, teamwork and responsibility.
-Every team member receives proper training and continuous support.
-</p>
-</div>
-
-<div class="card">
-<h3>📈 Career Growth</h3>
-<p>
-Outstanding performers can be promoted to Team Leader, Trainer or Management positions.
-Your career doesn't stop at Customer Support.
-</p>
-</div>
-
-</div>
-
-</section>
-
-<section>
-
-<div class="title">
-<h2>Job Overview</h2>
-<p>P2P Customer Support Specialist</p>
-</div>
-
-<div class="cards">
-
-<div class="card">
-<h3>💰 Salary</h3>
-<p>
-3,000 USDT / Month
-<br><br>
-+ Attractive Commission
-</p>
-</div>
-
-<div class="card">
-<h3>🏠 Location</h3>
-<p>
-100% Remote
-<br><br>
-Work From Home
-</p>
-</div>
-
-<div class="card">
-<h3>⏰ Employment</h3>
-<p>
-Full Time
-<br><br>
-Flexible Shift Schedule
-</p>
-</div>
-
-</div>
-
-</section>
-
-<section>
-
-<div class="title">
-<h2>Responsibilities</h2>
-<p>Your daily responsibilities</p>
-</div>
-
-<div class="cards">
-
-<div class="card">
-<h3>💬 Customer Communication</h3>
-<p>
-Communicate with customers professionally through online messaging platforms.
-</p>
-</div>
-
-<div class="card">
-<h3>🤝 Assist Customers</h3>
-<p>
-Answer enquiries and guide customers through our services with patience and professionalism.
-</p>
-</div>
-
-<div class="card">
-<h3>⭐ Quality Support</h3>
-<p>
-Maintain excellent customer satisfaction while following company guidelines.
-</p>
-</div>
-
-</div>
-
-</section>
-
-<section>
-
-<div class="title">
-<h2>Requirements</h2>
-<p>What we're looking for</p>
-</div>
-
-<div class="cards">
-
-<div class="card">
-<h3>🖥 Computer</h3>
-<p>
-Laptop or Desktop Computer
-Stable Internet Connection
-</p>
-</div>
-
-<div class="card">
-<h3>🇬🇧 English</h3>
-<p>
-Able to communicate in basic English.
-Customer service experience is an advantage.
-</p>
-</div>
-
-<div class="card">
-<h3>🚀 Motivation</h3>
-<p>
-Responsible, positive attitude and willing to learn new skills.
-</p>
-</div>
-
-</div>
-
-</section>
-<section>
-
-<div class="title">
-<h2>Benefits</h2>
-<p>Why Join Career Connect</p>
-</div>
-
-<div class="cards">
-
-<div class="card">
-<h3>🏠 Work From Home</h3>
-<p>Work remotely from anywhere in the world.</p>
-</div>
-
-<div class="card">
-<h3>💰 Fixed Salary</h3>
-<p>3,000 USDT / Month plus attractive commission.</p>
-</div>
-
-<div class="card">
-<h3>🎓 Paid Training</h3>
-<p>Professional onboarding and continuous guidance.</p>
-</div>
-
-<div class="card">
-<h3>📈 Career Growth</h3>
-<p>Promotion opportunities based on your performance.</p>
-</div>
-
-</div>
-
-</section>
-
-<section>
-
-<div class="title">
-<h2>Recruitment Process</h2>
-<p>Your journey starts here</p>
-</div>
-
-<div class="cards">
-
-<div class="card">
-<h3>1️⃣ Apply</h3>
-<p>Submit your online application form.</p>
-</div>
-
-<div class="card">
-<h3>2️⃣ Review</h3>
-<p>Our recruitment team reviews your profile.</p>
-</div>
-
-<div class="card">
-<h3>3️⃣ Interview</h3>
-<p>Telegram interview with our recruiter.</p>
-</div>
-
-<div class="card">
-<h3>4️⃣ Start Working</h3>
-<p>Complete training and join our international team.</p>
-</div>
-
-</div>
-
-</section>
-
-<section>
-
-<div class="title">
-<h2>Frequently Asked Questions</h2>
-</div>
-
-<div class="cards">
-
-<div class="card">
-<h3>Do I need experience?</h3>
-<p>No. Training will be provided. Customer service experience is a bonus.</p>
-</div>
-
-<div class="card">
-<h3>Where can I work?</h3>
-<p>Anywhere in the world with a stable internet connection.</p>
-</div>
-
-<div class="card">
-<h3>How will I be paid?</h3>
-<p>Salary is paid in USDT according to company policy.</p>
-</div>
-
-</div>
-
-</section>
-
-<footer style="background:#081428;color:#fff;padding:60px 8%;margin-top:60px;">
-
-<h2 style="margin-bottom:20px;">Career Connect</h2>
-
-<p>Global Remote Recruitment Platform</p>
-
-<p style="margin-top:20px;">
-Position:
-<strong>P2P Customer Support Specialist</strong>
-</p>
-
-<p style="margin-top:10px;">
-Salary:
-<strong>3,000 USDT / Month + Commission</strong>
-</p>
-
-<p style="margin-top:10px;">
-Email:
-contact@careerconnect.jobs
-</p>
-
-<p style="margin-top:30px;font-size:14px;opacity:.8;">
-© 2026 Career Connect. All Rights Reserved.
-</p>
-
-</footer>
+        <article class="process-card">
+          <div class="process-number">02</div>
+          <h3>Submit Details</h3>
+          <p>Provide the basic information required for the application review.</p>
+        </article>
+
+        <article class="process-card">
+          <div class="process-number">03</div>
+          <h3>Initial Screening</h3>
+          <p>The recruitment team reviews eligibility and suitability for the role.</p>
+        </article>
+
+        <article class="process-card">
+          <div class="process-number">04</div>
+          <h3>Interview</h3>
+          <p>Shortlisted applicants may be invited to an online interview or assessment.</p>
+        </article>
+
+        <article class="process-card">
+          <div class="process-number">05</div>
+          <h3>Written Offer</h3>
+          <p>Successful applicants receive written role and compensation terms.</p>
+        </article>
+
+      </div>
+    </section>
+
+    <section>
+
+      <div class="notice">
+
+        <h2>Applicant Safety Notice</h2>
+
+        <p>
+          <strong>Career Connect does not charge applicants a recruitment,
+          registration, training or security-deposit fee.</strong>
+
+          Applicants should never send money, share wallet recovery phrases,
+          disclose banking passwords or purchase cryptocurrency as a
+          condition of receiving a job offer.
+
+          Please verify all written employment terms before accepting a
+          position.
+        </p>
+
+      </div>
+    </section>
+
+    <section class="section-white" id="faq">
+
+      <div class="section-heading">
+        <h2>Frequently Asked Questions</h2>
+
+        <p>
+          Important information for applicants.
+        </p>
+      </div>
+
+      <div class="faq-container">
+
+        <details>
+          <summary>Is there an application or recruitment fee?</summary>
+
+          <p>
+            No. Applicants should not be asked to pay a recruitment,
+            registration, interview, training or security-deposit fee.
+          </p>
+        </details>
+
+        <details>
+          <summary>Does applying guarantee that I will be hired?</summary>
+
+          <p>
+            No. Applications are subject to review, screening and the
+            requirements of the available position.
+          </p>
+        </details>
+
+        <details>
+          <summary>Is previous customer service experience required?</summary>
+
+          <p>
+            Relevant experience can be an advantage. Final eligibility is
+            determined during the screening process.
+          </p>
+        </details>
+
+        <details>
+          <summary>How is compensation confirmed?</summary>
+
+          <p>
+            Compensation, commission conditions, payment frequency and
+            employment requirements should be provided in writing before
+            work begins.
+          </p>
+        </details>
+
+        <details>
+          <summary>Will applicants be asked for sensitive financial information?</summary>
+
+          <p>
+            Applicants should never provide wallet recovery phrases, online
+            banking passwords, payment authentication codes or unrestricted
+            access to personal financial accounts.
+          </p>
+        </details>
+
+        <details>
+          <summary>How will shortlisted applicants be contacted?</summary>
+
+          <p>
+            Shortlisted applicants will receive further instructions through
+            the communication details provided during the application
+            process.
+          </p>
+        </details>
+
+      </div>
+    </section>
+
+    <section id="contact">
+
+      <div class="contact-box">
+
+        <h2>Ready to Review the Opportunity?</h2>
+
+        <p>
+          Read all position information carefully before beginning your
+          application. Do not send payment or sensitive financial
+          credentials to anyone claiming to guarantee employment.
+        </p>
+
+        <a
+          class="btn btn-secondary"
+          href="https://t.me/CareerConnectHRbot?start=apply"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Contact Recruitment Team
+        </a>
+
+      </div>
+    </section>
+
+    <section class="section-white" id="privacy">
+
+      <div class="section-heading">
+        <h2>Privacy and Applicant Information</h2>
+
+        <p>
+          How information submitted during recruitment should be handled.
+        </p>
+      </div>
+
+      <div class="legal-section">
+
+        <h3>Information Collected</h3>
+
+        <p>
+          Information may include the applicant’s name, contact details,
+          location, language ability, work experience and other details
+          voluntarily submitted for recruitment purposes.
+        </p>
+
+        <h3>How Information Is Used</h3>
+
+        <p>
+          Applicant information should only be used to review applications,
+          communicate with candidates, assess suitability and complete
+          recruitment or onboarding procedures.
+        </p>
+
+        <h3>Information Security</h3>
+
+        <p>
+          Applicants should not submit passwords, wallet recovery phrases,
+          banking authentication codes or unrelated sensitive financial
+          information.
+        </p>
+
+        <h3>Accuracy of Information</h3>
+
+        <p>
+          Applicants are responsible for providing accurate information.
+          Career Connect should also provide accurate information about the
+          available role and recruitment process.
+        </p>
+
+        <h3>Contact</h3>
+
+        <p>
+          Recruitment enquiries can be submitted through the published
+          contact channel on this website.
+        </p>
+
+      </div>
+    </section>
+
+  </main>
+
+  <footer>
+
+    <div class="footer-grid">
+
+      <div class="footer-brand">
+        <h2>Career Connect</h2>
+
+        <p>
+          Remote career opportunity information and candidate recruitment
+          support.
+        </p>
+      </div>
+
+      <div class="footer-column">
+        <h3>Navigation</h3>
+
+        <a href="#about">About</a>
+        <a href="#jobs">Current Position</a>
+        <a href="#process">Recruitment Process</a>
+        <a href="#faq">FAQ</a>
+      </div>
+
+      <div class="footer-column">
+        <h3>Applicant Information</h3>
+
+        <a href="#privacy">Privacy</a>
+        <a href="#contact">Contact</a>
+
+        <p>
+          No recruitment fees should be requested from applicants.
+        </p>
+      </div>
+
+    </div>
+
+    <div class="footer-bottom">
+      © 2026 Career Connect. All rights reserved.
+    </div>
+
+  </footer>
+
+  <script>
+    const menuButton = document.getElementById("menuButton");
+    const navigation = document.getElementById("navigation");
+
+    menuButton.addEventListener("click", function () {
+      const isOpen = navigation.classList.toggle("open");
+
+      menuButton.setAttribute(
+        "aria-expanded",
+        isOpen ? "true" : "false"
+      );
+
+      menuButton.textContent = isOpen ? "✕" : "☰";
+    });
+
+    navigation.querySelectorAll("a").forEach(function (link) {
+      link.addEventListener("click", function () {
+        navigation.classList.remove("open");
+        menuButton.setAttribute("aria-expanded", "false");
+        menuButton.textContent = "☰";
+      });
+    });
+  </script>
 
 </body>
 </html>
